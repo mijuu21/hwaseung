@@ -325,6 +325,9 @@
     /* width: 924px; */
     width: 90.2344%;
   }
+  .foot-menu ul {
+    gap: 7rem;
+  }
 }
 /* 태블릿 디자인 */
 
@@ -374,20 +377,54 @@
     font-size: 1.4rem;
   }
 }
-
-/* 모바일 디자인 */
-@media (max-width: 390px) {
-  .inner,
-  .inner-wide {
-    /* width: 350px */
-    width: 89.7436em;
-  }
+/* 문제가 발생하는 해상도를 위한 분기 */
+@media (max-width: 1000px) {
   #header nav {
-    height: 5.7rem;
     justify-content: space-between;
   }
   .gnb {
     display: none;
+  }
+  .business-list {
+    flex-wrap: wrap;
+  }
+  .business-list li {
+    flex: 1 1 30%;
+  }
+  .foot-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
+  }
+  .foot-family {
+    align-items: center;
+  }
+  .foot-site {
+    margin-top: 4rem;
+  }
+  .sns-list {
+    order: -1;
+    margin-top: 0;
+  }
+  .policy-list {
+    margin-top: 2.2rem;
+  }
+  .foot-copyright {
+    margin-top: 3.8rem;
+  }
+}
+/* 모바일 디자인 */
+@media (max-width: 700px) {
+  :root {
+    font-size: 90%;
+  }
+  .inner,
+  .inner-wide {
+    /* width: 350px */
+    width: 89.7436%;
+  }
+  #header nav {
+    height: 5.7rem;
   }
 
   .logo a {
@@ -421,9 +458,6 @@
     font-size: 2.2rem;
   }
 
-  .business-list {
-    flex-wrap: wrap;
-  }
   .business-list li {
     flex: 0 1 50%;
     height: 21rem;
@@ -456,8 +490,17 @@
     font-size: 1.3rem;
   }
   .heritage-con a {
-    background: #55f;
+    /* background: #55f; */
     font-size: 1.3rem;
+    width: 28.4rem;
+    width: 81.142%;
+    height: 3.8rem;
+    border: 1px solid #000;
+    border-radius: 50px;
+    justify-content: center;
+    align-self: center;
+    align-self: initial;
+    /* align-self: unset; */
   }
 
   #footer {
@@ -468,6 +511,7 @@
   }
   .foot-links {
     width: 19.4rem;
+    width: 55.4286%;
     display: block;
   }
   .family-site {
@@ -475,17 +519,9 @@
     height: 3.5rem;
     margin-top: 2rem;
   }
-  .foot-family {
-    align-items: center;
-  }
-  .sns-list {
-    order: -1;
-    margin-top: 0;
-  }
-  .policy-list {
-    margin-top: 2.2rem;
-  }
-  .foot-copyright {
-    margin-top: 3.8rem;
+}
+@media (max-width: 500px) {
+  :root {
+    font-size: 62.5%;
   }
 }
