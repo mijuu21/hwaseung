@@ -71,6 +71,7 @@ $(function () {
   }
 
   let scrollTop = $window.scrollTop();
+
   setWhiteBackground();
 
   function setWhiteBackground() {
@@ -81,7 +82,6 @@ $(function () {
       $header.removeClass('w-bg');
     }
   }
-  $window.on('resize', setWhiteBackground);
 
   // 스크롤 이벤트
   $window.on('scroll', function () {
@@ -100,7 +100,7 @@ $(function () {
     const linkValue = $(this).val();
     window.open(linkValue);
   });
-  // AOS.js
+
   AOS.init({
     duration: 600,
     offset: 200,
